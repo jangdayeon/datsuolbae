@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: rgb(237, 232, 215); height:100%">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다쓰올배</title>
+
+
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            setInterval(moveImages, 2000); // 이미지가 2초마다 움직이도록 설정합니다.  
+        });
+        $(document).ready(function () {
+            $('.image-wrapper').on('click', function () {
+                $(this).attr("class", "stop-moving-image");
+                $(this).css('transform', 'none');
+                $(this).children('.image-text').css('display', 'block'); // 클릭한 이미지의 형제 요소인 .image-text를 보이도록 설정합니다.
+            });
+        });
+
+        function moveImages() {
+            var containerWidth = $('.image_container').width() - 150;
+            var containerHeight = $('.image_container').height() - 150;
+
+            $('.image-wrapper').each(function () {
+                var imageWidth = $(this).width();
+                var imageHeight = $(this).height();
+
+                var maxX = containerWidth - imageWidth;
+                var maxY = containerHeight - imageHeight;
+
+                var randomX = Math.floor(Math.random() * maxX);
+                var randomY = Math.floor(Math.random() * maxY);
+
+                $(this).css({ transform: `translate(${randomX}px, ${randomY}px)` });
+            });
+        }
+
+    </script>
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <link href="paper-1.css" type="text/css" rel="stylesheet">
+</head>
+
+<body style="width:70%; margin:0 auto; height: 100%;">
+    <header>
+        <div class="logo_div"> <a href="main.html"><img src="media/logo.png" class="logo" width="80px"> </a></div>
+
+        <ul id="menu">
+            <li class="menu_item"> <a href="paper-1.html">종이류</a>
+                <ul class="submenu">
+                    <li><a href="paper-1.html">분리배출법</a></li>
+                    <li><a href="paper-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="vinyl-1.html">비닐류</a>
+                <ul class="submenu">
+                    <li><a href="vinyl-1.html">분리배출법</a></li>
+                    <li><a href="vinyl-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="plastic-1.html">플라스틱류</a>
+                <ul class="submenu">
+                    <li><a href="plastic-1.html">분리배출법</a></li>
+                    <li><a href="plastic-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="can-1.html">금속캔 및 고철류</a>
+                <ul class="submenu">
+                    <li><a href="can-1.html">분리배출법</a></li>
+                    <li><a href="can-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="styrofoam-1.html">스티로폼류</a>
+                <ul class="submenu">
+                    <li><a href="styrofoam-1.html">분리배출법</a></li>
+                    <li><a href="styrofoam-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="bottle-1.html">유리병류</a>
+                <ul class="submenu">
+                    <li><a href="bottle-1.html">분리배출법</a></li>
+                    <li><a href="bottle-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="etc-1.html">그 외</a>
+                <ul class="submenu" id="submenu_etc">
+                    <li><a href="etc-1.html">폐전자제품 처리법</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <div id="wrap">
+        <div id="content-wrap">
+
+            <main>
+                <section style="height:140px; background-color: #F0F5F1;"></section>
+                <!-- 위 section은 아래 section에 의해 메뉴가 가려지는 문제를 해결하고자 만들었음 -->
+                <section
+                    style="z-index:0; margin: 0 auto; height:fit-content; min-height: 470px; background-color: #F0F5F1; text-align: center;"
+                    class=" center1 image_container">
+                    <h2 style="padding-top: 10px;">'흰색 스타로폼류'로 분리배출이 가능한 쓰레기는 무엇일까요? <br> 쓰레기를 <b style="color:#f4a700;font-size: 120%;">눌러</b> 확인해보세요! (4개) </h2>
+                    <div class="image-wrapper">
+                        <img src="media/05_styrofoam/‘과일포장’의 배경이 제거됨 2023-06-11 03_20_18.png" alt="과일포장"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">X</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/05_styrofoam/‘등산방석 (특수마대에)’의 배경이 제거됨 2023-06-11 03_20_19.png" alt="등산방석"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">X</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/05_styrofoam/‘색 있는 스티로폼’의 배경이 제거됨 2023-06-11 03_20_20.png" alt="색있는스티로폼"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">X</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/05_styrofoam/‘스티로폼 박스’의 배경이 제거됨 2023-06-11 03_20_20.png" alt="스티로폼박스"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">O</div>
+                    </div>
+                </section>
+                <section class="center2">
+                    <div class="explain_div">
+                        <img src="media/05_styrofoam/‘스티로폼 박스’의 배경이 제거됨 2023-06-11 03_20_20.png" alt="스티로폼박스"
+                        style="width:150px;" class="moving-image fal">
+                        <ul style="margin:auto 0;">
+                            <li style=" list-style-type: circle; ">농·수·축산물 포장용 발포스티렌상자, 전자제품 완충재로 사용되는 발포합성수지 포장재만 흰색 스티로폼류에 해당됩니다.</li>
+                        </ul>
+                    </div>
+                    <div class="explain_div">
+                        <img src="media/05_styrofoam/‘과일포장’의 배경이 제거됨 2023-06-11 03_20_18.png" alt="과일포장"
+                        style="width:150px;" class="moving-image fal">
+                        <img src="media/05_styrofoam/‘등산방석 (특수마대에)’의 배경이 제거됨 2023-06-11 03_20_19.png" alt="등산방석"
+                        style="width:150px;" class="moving-image fal">
+                        <img src="media/05_styrofoam/‘색 있는 스티로폼’의 배경이 제거됨 2023-06-11 03_20_20.png" alt="색있는스티로폼"
+                        style="width:150px;" class="moving-image fal">
+                        <ul style="margin:auto 0;">
+                            <li style=" list-style-type: circle; ">타 재질과 코팅 또는 접착된 발포스티렌, 건축용 내·외장재 스티로폼, 이물질을 제거하기 어려운 경우, 유식 스티리폼 접시 등은 종량제봉투, 특수규격마대 또는 대형폐기물로 배출합니다.</li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer>
+        © 2023 다쓰올배 by 장다연
+    </footer>
+</body>
+
+</html>

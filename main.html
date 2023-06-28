@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: rgb(237, 232, 215); height:100%">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다쓰올배</title>
+
+
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            setInterval(moveImages, 2000); // 이미지가 2초마다 움직이도록 설정합니다.  
+        });
+
+        function moveImages() {
+            var containerWidth = $('.image_container').width() - 150;
+            var containerHeight = $('.image_container').height() - 150;
+
+            $('.image-wrapper').each(function () {
+                var imageWidth = $(this).width();
+                var imageHeight = $(this).height();
+
+                var maxX = containerWidth - imageWidth;
+                var maxY = containerHeight - imageHeight;
+
+                var randomX = Math.floor(Math.random() * maxX);
+                var randomY = Math.floor(Math.random() * maxY);
+
+                $(this).css({ transform: `translate(${randomX}px, ${randomY}px)` });
+            });
+        }
+
+    </script>
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <link href="paper-1.css" type="text/css" rel="stylesheet">
+    <style>
+        .image-wrapper{
+            position: relative;
+        }
+    </style>
+</head>
+
+<body style="width:70%; margin:0 auto; height: 100%;">
+    <header>
+        <div class="logo_div"> <a href="main.html"><img src="media/logo.png" class="logo" width="80px"> </a></div>
+
+        <ul id="menu">
+            <li class="menu_item"> <a href="paper-1.html">종이류</a>
+                <ul class="submenu">
+                    <li><a href="paper-1.html">분리배출법</a></li>
+                    <li><a href="paper-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="vinyl-1.html">비닐류</a>
+                <ul class="submenu">
+                    <li><a href="vinyl-1.html">분리배출법</a></li>
+                    <li><a href="vinyl-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="plastic-1.html">플라스틱류</a>
+                <ul class="submenu">
+                    <li><a href="plastic-1.html">분리배출법</a></li>
+                    <li><a href="plastic-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="can-1.html">금속캔 및 고철류</a>
+                <ul class="submenu">
+                    <li><a href="can-1.html">분리배출법</a></li>
+                    <li><a href="can-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="styrofoam-1.html">스티로폼류</a>
+                <ul class="submenu">
+                    <li><a href="styrofoam-1.html">분리배출법</a></li>
+                    <li><a href="styrofoam-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="bottle-1.html">유리병류</a>
+                <ul class="submenu">
+                    <li><a href="bottle-1.html">분리배출법</a></li>
+                    <li><a href="bottle-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="etc-1.html">그 외</a>
+                <ul class="submenu" id="submenu_etc">
+                    <li><a href="etc-1.html">폐전자제품 처리법</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <div id="wrap">
+        <div id="content-wrap">
+
+            <main>
+                <section style="height:100px; background-color: #F0F5F1"></section>
+                <!-- 위 section은 아래 section에 의해 메뉴가 가려지는 문제를 해결하고자 만들었음 -->
+                <section
+                    style="z-index:0; margin: 0 auto; height:150px;background-color: #e3ede5; text-align: center;"
+                    class=" center1 image_container">
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘cd (재활용x)’의 배경이 제거됨 2023-06-11 03_19_36.png" alt="cd"
+                        style="width:150px;" class="moving-image fal">
+                        
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘생수병’의 배경이 제거됨 2023-06-11 03_19_52.png" alt="생수병"
+                        style="width:150px;" class="moving-image fal">
+                        
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘식용유병’의 배경이 제거됨 2023-06-11 03_19_32.png" alt="식용유병"
+                        style="width:150px;" class="moving-image fal">
+                        
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘식품용기’의 배경이 제거됨 2023-06-11 03_19_33.png" alt="식품용기"
+                        style="width:150px;" class="moving-image fal">
+                        
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘양념류 병’의 배경이 제거됨 2023-06-11 03_19_34.png" alt="양념류병"
+                        style="width:150px;" class="moving-image fal">
+                        
+                    </div>
+                    </section>
+                    <div style="z-index: 3; position:static; background-color:#e3ede5;">
+                    <h4 style="padding: 10px 20px ; line-height: 150%">'2021년 국민환경의식조사'에 따르자면 <b style="color:#f4a700;font-size: 120%;">'쓰레기/폐기물 처리 문제'</b>가 65%로 가장 중요하고 시급하게 해결해야 할 환경 문제로 뽑혔다고 합니다.<br>
+                        높은 의식 수준에 반면, 플라스틱 같은 경우는 올바르게 분리수거가 되지 않아 분리 수거율은 59%, <b style="color:#f4a700;font-size: 120%;">재활용률은 23%</b>라고 합니다.<br></h4>
+                        <h3 style="padding: 10px 20px ; line-height: 150%">환경문제를 해결하기 위한 <b style="color:#f49200;font-size: 120%;">올바른 분리수거 방법</b>을 위 메뉴를 눌러 <b style="color:#f4a700;font-size: 120%;">처리 공정</b>과 함께 확인해보세요!</h3>
+                    </div>
+                    <section
+                    style="z-index:0; margin: 0 auto; height:150px;background-color: #e3ede5; text-align: center;"
+                    class=" center1 image_container">
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘요구르트병’의 배경이 제거됨 2023-06-11 03_19_34.png" alt="요구르트병"
+                        style="width:150px;" class="moving-image fal">
+                        
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘유색 막걸리병’의 배경이 제거됨 2023-06-11 03_19_35.png" alt="유색막걸리병"
+                        style="width:100px;" class="moving-image fal">
+                        
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘음료수병’의 배경이 제거됨 2023-06-11 03_19_53.png" alt="음료수병"
+                        style="width:100px;" class="moving-image fal">
+                        
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘칫솔 (재활용x)’의 배경이 제거됨 2023-06-11 03_19_35.png" alt="칫솔"
+                        style="width:150px;" class="moving-image fal">
+                        
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘테이프 (재활용x)’의 배경이 제거됨 2023-06-11 03_19_36.png" alt="테이프"
+                        style="width:150px;" class="moving-image fal">
+                        
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘투명 막걸리병’의 배경이 제거됨 2023-06-11 03_19_53.png" alt="투명막걸리병"
+                        style="width:100px;" class="moving-image fal">
+                        
+                    </div>
+                </section>
+                <section style="background-color: #F0F5F1; height:160px"></section>
+            </main>
+        </div>
+    </div>
+    <footer style="margin-top:0px">
+        © 2023 다쓰올배 by 장다연
+    </footer>
+</body>
+
+</html>

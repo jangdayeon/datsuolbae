@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'TTWanjudaedunsancheB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'TTWanjudaedunsancheB', serif;
+}
+
+li {
+    list-style: none;
+}
+
+ul a {
+    text-decoration: none;
+    font-size: 1vw;
+}
+
+.logo_div {
+    padding: 20px 10px;
+    text-align: center;
+    background-color: #F0F5F1;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 1vw;
+}
+
+#menu {
+    width: 100%;
+    overflow: hidden;
+    margin: 0px auto;
+}
+
+#menu>li {
+    width: 14.28%;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgb(229, 217, 182);
+}
+
+#menu a {
+    color: rgb(40, 84, 48);
+    text-shadow: -10px #ffffff;
+}
+
+.submenu>li {
+    line-height: 50px;
+    background-color: rgb(164, 190, 123);
+}
+
+.submenu {
+    height: 0;
+    overflow: hidden;
+}
+
+#menu>li:hover {
+    background-color: rgb(95, 141, 78);
+    transition-duration: 0.5s;
+    color:rgb(164, 190, 123);
+}
+
+#menu>li:hover .submenu {
+    height: 100%;
+    transition-duration: 1s;
+}
+
+#menu>li:hover #submenu_etc {
+    height: 100%;
+    transition-duration: 1s;
+}
+
+.submenu>li:hover {
+    background-color: rgb(95, 141, 78);
+}
+
+#wrap {
+    min-height: calc(100% -240px);
+}
+
+footer{
+    text-align: center; 
+    font-size:0.9em;
+    padding-top:20px;
+    margin-top:20px;
+    height: 40px;
+    background-color: rgb(229, 217, 182);
+}
+
+header{
+    height:180px;
+}
+
+main{
+    min-height: 700px;
+}
+

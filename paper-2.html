@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="background-color: rgb(237, 232, 215); height:100%">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다쓰올배</title>
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <link href="paper-1.css" type="text/css" rel="stylesheet">
+    <style>
+        .explain_div{
+            flex-direction: column;
+        }
+        h3 {
+            margin-left: 10px;
+        }
+        .imgcss{
+            width:250px;
+        }
+        .imgcss2{
+            width:20px;
+        }
+        .imgcss3{
+            width:200px;
+        }
+        .imgcss3_etc{
+            width:350px;
+            margin-top: 5px;
+        }
+        .imgcss:hover, .imgcss3:hover, .imgcss3_etc:hover{
+            filter: drop-shadow(0 0 0.75rem white);
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.i1').hover(function(){
+                $('#inHtml1').html("이물질 제거와 수집 원료로 쓰기 곤란한 원료 골라내기");
+            }, function(){
+                $('#inHtml1').html("");
+            });
+            $('.i2').hover(function(){
+                $('#inHtml1').html("펄프와 비닐을 부드럽게 해리시켜 분리");
+            }, function(){
+                $('#inHtml1').html("");
+            });
+            $('.i3').hover(function(){
+                $('#inHtml1').html("가성소다를 투입하여 우유팩 인쇄잉크 및 불순물을 제거");
+            }, function(){
+                $('#inHtml1').html("");
+            });
+            $('.i4').hover(function(){
+                $('#inHtml1').html("미해리 원료를 세밀하게 해리시킴과 동시에 미세하게 절단하고 해리되지 않은 섬유는 제거");
+            }, function(){
+                $('#inHtml1').html("");
+            });
+            $('.i5').hover(function(){
+                $('#inHtml1').html("펄프화된 화장지 원료를 물에서 건져내 원지판에 묻혀 초지 완성(화장지의 원단)");
+            }, function(){
+                $('#inHtml1').html("");
+            });
+            $('.i6').hover(function(){
+                $('#inHtml1').html("화장지 가공업체에서 무늬나 엠보싱 처리후 판매용 화장지로 포장");
+            }, function(){
+                $('#inHtml1').html("");
+            });
+            $('.i7').hover(function(){
+                $('#inHtml0').html("해리 : 폐지를 물과 약품에 섞어 작은 섬유입자로 풀어주는 공정<br>정선 : 해리되지 않은 미세한 이물질(잉크, 점착물) 제거<br>농축 : 유기, 무기화학 염료 등을 첨가하여 원료에 특수 기능 부여 (원료농도조절)<br>고해 : 원료를 갈아 유연하게 하는 공정");
+            }, function(){
+                $('#inHtml0').html("");
+            });
+        })
+    </script>
+</head>
+
+<body style="width:70%; margin:0 auto; height: 100%;">
+    <header>
+        <div class="logo_div"> <a href="main.html"><img src="media/logo.png" class="logo" width="80px"> </a></div>
+
+        <ul id="menu">
+            <li class="menu_item"> <a href="paper-1.html">종이류</a>
+                <ul class="submenu">
+                    <li><a href="paper-1.html">분리배출법</a></li>
+                    <li><a href="paper-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="vinyl-1.html">비닐류</a>
+                <ul class="submenu">
+                    <li><a href="vinyl-1.html">분리배출법</a></li>
+                    <li><a href="vinyl-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="plastic-1.html">플라스틱류</a>
+                <ul class="submenu">
+                    <li><a href="plastic-1.html">분리배출법</a></li>
+                    <li><a href="plastic-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="can-1.html">금속캔 및 고철류</a>
+                <ul class="submenu">
+                    <li><a href="can-1.html">분리배출법</a></li>
+                    <li><a href="can-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="styrofoam-1.html">스티로폼류</a>
+                <ul class="submenu">
+                    <li><a href="styrofoam-1.html">분리배출법</a></li>
+                    <li><a href="styrofoam-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="bottle-1.html">유리병류</a>
+                <ul class="submenu">
+                    <li><a href="bottle-1.html">분리배출법</a></li>
+                    <li><a href="bottle-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="etc-1.html">그 외</a>
+                <ul class="submenu" id="submenu_etc">
+                    <li><a href="etc-1.html">폐전자제품 처리법</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <div id="wrap">
+        <div id="content-wrap">
+
+            <main>
+                <section style="height:140px; background-color: #F0F5F1;">
+                <h1 style="text-align: center;padding-top:80px">종이 배출 후 공정과정</h1>
+                </section>
+                <section class="center2" style="height: 300px; padding:100px 0px; text-align: center;">
+                    <table style="margin:0 auto; justify-content: space-evenly; display: flex;">
+                        <tr>
+                            <td><img class="imgcss " src="./media/01_2_paper/paper/1.png"></td>
+                            <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살.png"></td>
+                            
+                            <td><img class="imgcss " src="./media/01_2_paper/paper/2.png"></td>
+                            <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살.png"></td>
+                            <td><img class="imgcss " src="./media/01_2_paper/paper/3.png"></td>
+                        </tr>
+                        <tr>
+                            <td></td><td></td><td></td><td></td>
+                            <td><img class="imgcss2" src="./media/01_2_paper/paper/아래화살.png"></td>
+                        </tr>
+                        <tr>
+                            <td><img class="imgcss" src="./media/01_2_paper/paper/6.png"></td>
+                            <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살2.png"></td>
+                            
+                            <td><img class="imgcss i7" src="./media/01_2_paper/paper/5.png"></td>
+                            <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살2.png"></td>
+                            <td><img class="imgcss " src="./media/01_2_paper/paper/4.png"></td>
+                        </tr>
+                    </table>
+                    <div id="inHtml0" style="margin-top: 30px;">
+                        
+                    </div>
+                </section>
+                <section style="height:140px; background-color: #F0F5F1;">
+                    <h1 style="text-align: center;padding-top:80px">종이팩 배출 후 공정과정</h1>
+                    </section>
+                    <section class="center2" style="height: 400px; padding:100px 0px; text-align: center;">
+                        <table style="margin:0 auto; justify-content: space-evenly; display: flex;">
+                            <tr>
+                                <td style="text-align: right;"><img class="imgcss3 i1" src="./media/01_2_paper/paperpack/1.png"></td>
+                                <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살.png"></td>
+                                
+                                <td><img class="imgcss3 i2" src="./media/01_2_paper/paperpack/2.png"></td>
+                                <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살.png"></td>
+                                <td><img class="imgcss3 i3" src="./media/01_2_paper/paperpack/3.png"></td>
+                            </tr>
+                            <tr>
+                                <td></td><td></td><td></td><td></td>
+                                <td><img class="imgcss2" src="./media/01_2_paper/paper/아래화살.png"></td>
+                            </tr>
+                            <tr>
+                                <td><img class="imgcss3_etc i6" src="./media/01_2_paper/paperpack/6.png"></td>
+                                <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살2.png"></td>
+                                
+                                <td><img class="imgcss3 i5" src="./media/01_2_paper/paperpack/5.png"></td>
+                                <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살2.png"></td>
+                                <td><img class="imgcss3 i4" src="./media/01_2_paper/paperpack/4.png"></td>
+                            </tr>
+                        </table>
+                        <div id="inHtml1" style="margin-top: 30px;">
+                            
+                        </div>
+                    </section>
+            </main>
+        </div>
+    </div>
+    <footer>
+        © 2023 다쓰올배 by 장다연
+    </footer>
+</body>
+
+</html>

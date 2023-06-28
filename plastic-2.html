@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: rgb(237, 232, 215); height:100%">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다쓰올배</title>
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <link href="paper-1.css" type="text/css" rel="stylesheet">
+    <style>
+        .explain_div{
+            flex-direction: column;
+        }
+        h3 {
+            margin-left: 10px;
+        }
+        .imgcss{
+            width:200px;
+        }
+        .imgcss2{
+            width:20px;
+        }
+        .imgcss3{
+            width:200px;
+        }
+        .imgcss3_etc{
+            width:350px;
+            margin-top: 5px;
+        }
+        .imgcss:hover, .imgcss3:hover, .imgcss3_etc:hover{
+            filter: drop-shadow(0 0 0.75rem white);
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.i1').hover(function(){
+                $('#inHtml1').html("폐 PET병 압축 Bale을 제거하여 투입");
+            }, function(){
+                $('#inHtml1').html("");
+            });
+            $('.i2').hover(function(){
+                $('#inHtml1').html("<ul><li>Bale로 부터 비PET(금속류, 일반플라스틱, 기타 쓰레기 등), 알루미늄 병뚜껑, 선별수거</li><li>수거방법에 따라 PET 수율에 영향</li><li>PET병의 색상에 따라 무색과 유색, 복합으로 선별</li></ul>");
+            }, function(){
+                $('#inHtml1').html("");
+            });
+            $('.i3').hover(function(){
+                $('#inHtml1').html("<ul><li>분쇄직경의 크고 작음과 분쇄 칼날의 관리에 따라 수율에 영향</li><li>분쇄직경이 작을수록 칼날의 그라인딩 상태가 나쁠수록 분침 손실 영향</li></ul>");
+            }, function(){
+                $('#inHtml1').html("");
+            });
+            $('.i4').hover(function(){
+                $('#inHtml1').html("약품 세척 탱크 바닥에 비중이 큰 PET는 가라앉으며, 상대적으로 비중이 작은 라벨과 PE, PP재질의 병뚜껑은 수면에 떠오르게 되어 제거 됨");
+            }, function(){
+                $('#inHtml1').html("");
+            });
+            $('.i5').hover(function(){
+                $('#inHtml1').html("탈수기의 스크린 직영에 의해 PET분침 손실 영향");
+            }, function(){
+                $('#inHtml1').html("");
+            });
+            $('.i6').hover(function(){
+                $('#inHtml1').html("밀폐형 열풍기 방식인지 개방형 건조기 인지에 따라 PET 손실 영향");
+            }, function(){
+                $('#inHtml1').html("");
+            });
+            $('.i7').hover(function(){
+                $('#inHtml1').html("생산된 PET Flake를 운반이 용이하게 포장하는 과정");
+            }, function(){
+                $('#inHtml1').html("");
+            });
+            $('.i7').hover(function(){
+                $('#inHtml1').html("포장된 PET Flake를 적재 후 출고");
+            }, function(){
+                $('#inHtml1').html("");
+            });
+        })
+    </script>
+</head>
+
+<body style="width:70%; margin:0 auto; height: 100%;">
+    <header>
+        <div class="logo_div"> <a href="main.html"><img src="media/logo.png" class="logo" width="80px"> </a></div>
+
+        <ul id="menu">
+            <li class="menu_item"> <a href="paper-1.html">종이류</a>
+                <ul class="submenu">
+                    <li><a href="paper-1.html">분리배출법</a></li>
+                    <li><a href="paper-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="vinyl-1.html">비닐류</a>
+                <ul class="submenu">
+                    <li><a href="vinyl-1.html">분리배출법</a></li>
+                    <li><a href="vinyl-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="plastic-1.html">플라스틱류</a>
+                <ul class="submenu">
+                    <li><a href="plastic-1.html">분리배출법</a></li>
+                    <li><a href="plastic-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="can-1.html">금속캔 및 고철류</a>
+                <ul class="submenu">
+                    <li><a href="can-1.html">분리배출법</a></li>
+                    <li><a href="can-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="styrofoam-1.html">스티로폼류</a>
+                <ul class="submenu">
+                    <li><a href="styrofoam-1.html">분리배출법</a></li>
+                    <li><a href="styrofoam-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="bottle-1.html">유리병류</a>
+                <ul class="submenu">
+                    <li><a href="bottle-1.html">분리배출법</a></li>
+                    <li><a href="bottle-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="etc-1.html">그 외</a>
+                <ul class="submenu" id="submenu_etc">
+                    <li><a href="etc-1.html">폐전자제품 처리법</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <div id="wrap">
+        <div id="content-wrap">
+
+            <main>
+                <section style="height:140px; background-color: #F0F5F1;">
+                <h1 style="text-align: center;padding-top:80px">플라스틱 배출 후 공정과정</h1>
+                </section>
+                <section class="center2" style="height: 300px; padding:100px 0px; text-align: center;">
+                    <table style="margin:0 auto; justify-content: space-evenly; display: flex;">
+                        <tr>
+                            <td><img class="imgcss " src="./media/03_2_plastic/plastic/1.png"></td>
+                            <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살.png"></td>
+                            
+                            <td><img class="imgcss " src="./media/03_2_plastic/plastic/2.png"></td>
+                            <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살.png"></td>
+                            <td><img class="imgcss " src="./media/03_2_plastic/plastic/3.png"></td>
+                            <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살.png"></td>
+                            <td><img class="imgcss " src="./media/03_2_plastic/plastic/4.png"></td>
+                            <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살.png"></td>
+                            <td><img class="imgcss " src="./media/03_2_plastic/plastic/5.png"></td>
+                        </tr>
+                    </table>
+                    <div id="inHtml0" style="margin-top: 30px;">
+                        
+                    </div>
+                </section>
+                <section style="height:140px; background-color: #F0F5F1;">
+                    <h1 style="text-align: center;padding-top:80px">페트병 배출 후 공정과정</h1>
+                    </section>
+                    <section class="center2" style="height: 400px; padding:100px 0px; text-align: center;">
+                        <table style="margin:0 auto; justify-content: space-evenly; display: flex;">
+                            <tr>
+                                <td><img class="imgcss3 i1" src="./media/03_2_plastic/pet/1.png"></td>
+                                <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살.png"></td>
+                                
+                                <td><img class="imgcss3 i2" src="./media/03_2_plastic/pet/2.png"></td>
+                                <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살.png"></td>
+                                <td><img class="imgcss3 i3" src="./media/03_2_plastic/pet/3.png"></td>
+                                <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살.png"></td>
+                                <td><img class="imgcss3 i4" src="./media/03_2_plastic/pet/4.png"></td>
+                            </tr>
+                            <tr>
+                                <td></td><td></td><td></td><td></td><td></td><td></td>
+                                <td><img class="imgcss2" src="./media/01_2_paper/paper/아래화살.png"></td>
+                            </tr>
+                            <tr>
+                                <td><img class="imgcss3 i8" src="./media/03_2_plastic/pet/8.png"></td>
+                                <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살2.png"></td>
+                                <td><img class="imgcss3 i7" src="./media/03_2_plastic/pet/7.png"></td>
+                                <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살2.png"></td>
+                                <td><img class="imgcss3 i6" src="./media/03_2_plastic/pet/6.png"></td>
+                                <td><img class="imgcss2" src="./media/01_2_paper/paper/옆화살2.png"></td>
+                                <td><img class="imgcss3 i5" src="./media/03_2_plastic/pet/5.png"></td>
+                                
+                                
+                                
+                            </tr>
+                        </table>
+                        <div id="inHtml1" style="margin-top: 30px;">
+                            
+                        </div>
+                    </section>
+            </main>
+        </div>
+    </div>
+    <footer>
+        © 2023 다쓰올배 by 장다연
+    </footer>
+</body>
+
+</html>

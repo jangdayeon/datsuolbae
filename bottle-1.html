@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: rgb(237, 232, 215); height:100%">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다쓰올배</title>
+
+
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            setInterval(moveImages, 2000); // 이미지가 2초마다 움직이도록 설정합니다.  
+        });
+        $(document).ready(function () {
+            $('.image-wrapper').on('click', function () {
+                $(this).attr("class", "stop-moving-image");
+                $(this).css('transform', 'none');
+                $(this).children('.image-text').css('display', 'block'); // 클릭한 이미지의 형제 요소인 .image-text를 보이도록 설정합니다.
+            });
+        });
+
+        function moveImages() {
+            var containerWidth = $('.image_container').width() - 150;
+            var containerHeight = $('.image_container').height() - 150;
+
+            $('.image-wrapper').each(function () {
+                var imageWidth = $(this).width();
+                var imageHeight = $(this).height();
+
+                var maxX = containerWidth - imageWidth;
+                var maxY = containerHeight - imageHeight;
+
+                var randomX = Math.floor(Math.random() * maxX);
+                var randomY = Math.floor(Math.random() * maxY);
+
+                $(this).css({ transform: `translate(${randomX}px, ${randomY}px)` });
+            });
+        }
+
+    </script>
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <link href="paper-1.css" type="text/css" rel="stylesheet">
+</head>
+
+<body style="width:70%; margin:0 auto; height: 100%;">
+    <header>
+        <div class="logo_div"> <a href="main.html"><img src="media/logo.png" class="logo" width="80px"> </a></div>
+
+        <ul id="menu">
+            <li class="menu_item"> <a href="paper-1.html">종이류</a>
+                <ul class="submenu">
+                    <li><a href="paper-1.html">분리배출법</a></li>
+                    <li><a href="paper-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="vinyl-1.html">비닐류</a>
+                <ul class="submenu">
+                    <li><a href="vinyl-1.html">분리배출법</a></li>
+                    <li><a href="vinyl-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="plastic-1.html">플라스틱류</a>
+                <ul class="submenu">
+                    <li><a href="plastic-1.html">분리배출법</a></li>
+                    <li><a href="plastic-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="can-1.html">금속캔 및 고철류</a>
+                <ul class="submenu">
+                    <li><a href="can-1.html">분리배출법</a></li>
+                    <li><a href="can-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="styrofoam-1.html">스티로폼류</a>
+                <ul class="submenu">
+                    <li><a href="styrofoam-1.html">분리배출법</a></li>
+                    <li><a href="styrofoam-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="bottle-1.html">유리병류</a>
+                <ul class="submenu">
+                    <li><a href="bottle-1.html">분리배출법</a></li>
+                    <li><a href="bottle-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="etc-1.html">그 외</a>
+                <ul class="submenu" id="submenu_etc">
+                    <li><a href="etc-1.html">폐전자제품 처리법</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <div id="wrap">
+        <div id="content-wrap">
+
+            <main>
+                <section style="height:140px; background-color: #F0F5F1;"></section>
+                <!-- 위 section은 아래 section에 의해 메뉴가 가려지는 문제를 해결하고자 만들었음 -->
+                <section
+                    style="z-index:0; margin: 0 auto; height:fit-content; min-height: 470px; background-color: #F0F5F1; text-align: center;"
+                    class=" center1 image_container">
+                    <h2 style="padding-top: 10px;">'유리병류'로 분리배출이 가능한 쓰레기는 무엇일까요? <br> 쓰레기를 <b style="color:#f4a700;font-size: 120%;">눌러</b> 확인해보세요! (9개) </h2>
+                    <div class="image-wrapper">
+                        <img src="media/06_bottle/‘내열유리제품 (재활용x)’의 배경이 제거됨 2023-06-11 03_20_33.png" alt="내열유리제품"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">X</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/06_bottle/‘도자기 (재활용x)’의 배경이 제거됨 2023-06-11 03_20_34.png" alt="도자기"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">X</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/06_bottle/‘백열전구 (재활용x)’의 배경이 제거됨 2023-06-11 03_20_34 2023-06-11 18_53_28.png" alt="백열전구"
+                        style="width:80px;" class="moving-image fal">
+                        <div class="image-text">X</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/06_bottle/‘빈용기보증금제도’의 배경이 제거됨 2023-06-11 03_20_35.png" alt="빈용기보증금제도_병"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">★</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/06_bottle/‘양주병’의 배경이 제거됨 2023-06-11 03_20_36.png" alt="양주병"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">O</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/06_bottle/‘와인병’의 배경이 제거됨 2023-06-11 03_20_37.png" alt="와인병"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">O</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/06_bottle/‘유리 음료수병’의 배경이 제거됨 2023-06-11 03_20_36.png" alt="유리음료수병"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">O</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/06_bottle/‘크리스탈 유리제품 (재활용x)’의 배경이 제거됨 2023-06-11 03_20_38.png" alt="크리스탈유리제품"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">X</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/06_bottle/‘형광등 (재활용x)’의 배경이 제거됨 2023-06-11 03_20_38.png" alt="형광등"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">★</div>
+                    </div>
+                </section>
+                <section class="center2">
+                    <div class="explain_div">
+                        <img src="media/06_bottle/‘내열유리제품 (재활용x)’의 배경이 제거됨 2023-06-11 03_20_33.png" alt="내열유리제품"
+                        style="width:100px;" class="moving-image fal">
+                        <img src="media/06_bottle/‘도자기 (재활용x)’의 배경이 제거됨 2023-06-11 03_20_34.png" alt="도자기"
+                        style="width:100px;" class="moving-image fal">
+                        <img src="media/06_bottle/‘크리스탈 유리제품 (재활용x)’의 배경이 제거됨 2023-06-11 03_20_38.png" alt="크리스탈유리제품"
+                        style="width:100px;" class="moving-image fal">
+                        <img src="media/06_bottle/‘형광등 (재활용x)’의 배경이 제거됨 2023-06-11 03_20_38.png" alt="형광등"
+                        style="width:100px;" class="moving-image fal">
+                        <ul style="margin:auto 0;">
+                            <li style=" list-style-type: circle; ">깨진 유리제품은 신문지 등에 싸서 종량제봉투로 배출합니다.</li>
+                            <li style=" list-style-type: circle; ">코팅 및 다양한 색상이 들어간 유리제품, 내열 유리제품, 크리스탈 유리제품, 판유리, 조명기구용 유리류, 사기 도자기류 등은 특수규격마대 또는 대형폐기물로 배출합니다.</li>
+                        </ul>
+                    </div>
+                    <div class="explain_div">
+                        <img src="media/06_bottle/‘빈용기보증금제도’의 배경이 제거됨 2023-06-11 03_20_35.png" alt="빈용기보증금제도_병"
+                        style="width:150px;" class="moving-image fal">
+                        <ul style="margin:auto 0;">
+                            <li style=" list-style-type: circle; ">소주, 맥주 등 빈용기 보증감 대상 유리병은 소매점 등에 반납합니다.</li>
+                            <li style=" list-style-type: circle; ">빈용기 보증감 대상 유리병은 겉면에 보증금 환불문구가 있고, EPR 유리병에는 겉면에 분리배출 표시가 되어 있습니다.</li>
+                        </ul>
+                    </div>
+                    <div class="explain_div">
+                        <img src="media/06_bottle/‘와인병’의 배경이 제거됨 2023-06-11 03_20_37.png" alt="와인병"
+                        style="width:100px;" class="moving-image fal">
+                        <img src="media/06_bottle/‘유리 음료수병’의 배경이 제거됨 2023-06-11 03_20_36.png" alt="유리음료수병"
+                        style="width:150px;" class="moving-image fal">
+                        <ul style="margin:auto 0;">
+                            <li style=" list-style-type: circle; ">음료수병, 기타병류는 담배꽁초 등 이물질을 넣지 않고 배출합니다.</li>
+                            <li style=" list-style-type: circle; ">접착제로 부착되지 아니하여 상표제거가 가능한 경우 상표를 제거한 후 배출합니다.</li>
+                        </ul>
+                    </div>
+                    <div class="explain_div">
+                        <img src="media/06_bottle/‘형광등 (재활용x)’의 배경이 제거됨 2023-06-11 03_20_38.png" alt="형광등"
+                        style="width:150px;" class="moving-image fal">
+                        <ul style="margin:auto 0;">
+                            <li style=" list-style-type: circle; ">폐형광등 중 재활용 가능한 형광등은 직관형 형광램프(FL), 환형(원형)형광램프(FCL), 안정기 내장형램프(CFL), 콤팩트형 램프(FPL)입니다.</li>
+                            <li style=" list-style-type: circle; ">재활용 가능한 형광등은 깨지지 않도록 주의하여 주요거점에 설치된 폐형광등 전용수거함에 배출합니다.</li>
+                            <li style=" list-style-type: circle; ">깨진 형광등은 신문지 등으로 싸서 일반 종량제봉투로 배출합니다.</li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer>
+        © 2023 다쓰올배 by 장다연
+    </footer>
+</body>
+
+</html>

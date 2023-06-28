@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: rgb(237, 232, 215); height:100%">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다쓰올배</title>
+
+
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            setInterval(moveImages, 2000); // 이미지가 2초마다 움직이도록 설정합니다.  
+        });
+        $(document).ready(function () {
+            $('.image-wrapper').on('click', function () {
+                $(this).attr("class", "stop-moving-image");
+                $(this).css('transform', 'none');
+                $(this).children('.image-text').css('display', 'block'); // 클릭한 이미지의 형제 요소인 .image-text를 보이도록 설정합니다.
+            });
+        });
+
+        function moveImages() {
+            var containerWidth = $('.image_container').width() - 150;
+            var containerHeight = $('.image_container').height() - 150;
+
+            $('.image-wrapper').each(function () {
+                var imageWidth = $(this).width();
+                var imageHeight = $(this).height();
+
+                var maxX = containerWidth - imageWidth;
+                var maxY = containerHeight - imageHeight;
+
+                var randomX = Math.floor(Math.random() * maxX);
+                var randomY = Math.floor(Math.random() * maxY);
+
+                $(this).css({ transform: `translate(${randomX}px, ${randomY}px)` });
+            });
+        }
+
+    </script>
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <link href="paper-1.css" type="text/css" rel="stylesheet">
+</head>
+
+<body style="width:70%; margin:0 auto; height: 100%;">
+    <header>
+        <div class="logo_div"> <a href="main.html"><img src="media/logo.png" class="logo" width="80px"> </a></div>
+
+        <ul id="menu">
+            <li class="menu_item"> <a href="paper-1.html">종이류</a>
+                <ul class="submenu">
+                    <li><a href="paper-1.html">분리배출법</a></li>
+                    <li><a href="paper-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="vinyl-1.html">비닐류</a>
+                <ul class="submenu">
+                    <li><a href="vinyl-1.html">분리배출법</a></li>
+                    <li><a href="vinyl-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="plastic-1.html">플라스틱류</a>
+                <ul class="submenu">
+                    <li><a href="plastic-1.html">분리배출법</a></li>
+                    <li><a href="plastic-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="can-1.html">금속캔 및 고철류</a>
+                <ul class="submenu">
+                    <li><a href="can-1.html">분리배출법</a></li>
+                    <li><a href="can-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="styrofoam-1.html">스티로폼류</a>
+                <ul class="submenu">
+                    <li><a href="styrofoam-1.html">분리배출법</a></li>
+                    <li><a href="styrofoam-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="bottle-1.html">유리병류</a>
+                <ul class="submenu">
+                    <li><a href="bottle-1.html">분리배출법</a></li>
+                    <li><a href="bottle-2.html">공정과정</a></li>
+                </ul>
+            </li>
+            <li class="menu_item"> <a href="etc-1.html">그 외</a>
+                <ul class="submenu" id="submenu_etc">
+                    <li><a href="etc-1.html">폐전자제품 처리법</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <div id="wrap">
+        <div id="content-wrap">
+
+            <main>
+                <section style="height:140px; background-color: #F0F5F1;"></section>
+                <!-- 위 section은 아래 section에 의해 메뉴가 가려지는 문제를 해결하고자 만들었음 -->
+                <section
+                    style="z-index:0; margin: 0 auto; height:fit-content; min-height: 470px; background-color: #F0F5F1; text-align: center;"
+                    class=" center1 image_container">
+                    <h2 style="padding-top: 10px;">'플라스틱류'로 분리배출이 가능한 쓰레기는 무엇일까요? <br> 쓰레기를 <b style="color:#f4a700;font-size: 120%;">눌러</b> 확인해보세요! (11개) </h2>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘cd (재활용x)’의 배경이 제거됨 2023-06-11 03_19_36.png" alt="cd"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">X</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘생수병’의 배경이 제거됨 2023-06-11 03_19_52.png" alt="생수병"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">★</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘식용유병’의 배경이 제거됨 2023-06-11 03_19_32.png" alt="식용유병"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">O</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘식품용기’의 배경이 제거됨 2023-06-11 03_19_33.png" alt="식품용기"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">O</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘양념류 병’의 배경이 제거됨 2023-06-11 03_19_34.png" alt="양념류병"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">O</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘요구르트병’의 배경이 제거됨 2023-06-11 03_19_34.png" alt="요구르트병"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">O</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘유색 막걸리병’의 배경이 제거됨 2023-06-11 03_19_35.png" alt="유색막걸리병"
+                        style="width:100px;" class="moving-image fal">
+                        <div class="image-text">O</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘음료수병’의 배경이 제거됨 2023-06-11 03_19_53.png" alt="음료수병"
+                        style="width:100px;" class="moving-image fal">
+                        <div class="image-text">★</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘칫솔 (재활용x)’의 배경이 제거됨 2023-06-11 03_19_35.png" alt="칫솔"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">X</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘테이프 (재활용x)’의 배경이 제거됨 2023-06-11 03_19_36.png" alt="테이프"
+                        style="width:150px;" class="moving-image fal">
+                        <div class="image-text">X</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="media/03_plastic/‘투명 막걸리병’의 배경이 제거됨 2023-06-11 03_19_53.png" alt="투명막걸리병"
+                        style="width:100px;" class="moving-image fal">
+                        <div class="image-text">★</div>
+                    </div>
+                </section>
+                <section class="center2">
+                    <div class="explain_div">
+                        <img src="media/03_plastic/‘cd (재활용x)’의 배경이 제거됨 2023-06-11 03_19_36.png" alt="cd"
+                        style="width:150px;" class="moving-image fal">
+                        <img src="media/03_plastic/‘칫솔 (재활용x)’의 배경이 제거됨 2023-06-11 03_19_35.png" alt="칫솔"
+                        style="width:150px;" class="moving-image fal">
+                        <img src="media/03_plastic/‘테이프 (재활용x)’의 배경이 제거됨 2023-06-11 03_19_36.png" alt="테이프"
+                        style="width:150px;" class="moving-image fal">
+                        <ul style="margin:auto 0;">
+                            <li style=" list-style-type: circle; ">플라스틱 이외의 재질이 부착된 완구·문구류, 옷걸이, 칫솔, 파일철, 전화기, 낚싯대, 유모차·보행기, CD·DVD 등은 종량제봉투, 특수규격마대 또는 대형폐기물 등으로 배출합니다.</li>
+                        </ul>
+                    </div>
+                    <div class="explain_div">
+                        <img src="media/03_plastic/‘생수병’의 배경이 제거됨 2023-06-11 03_19_52.png" alt="생수병"
+                        style="width:100px;" class="moving-image fal">
+                        <img src="media/03_plastic/‘식품용기’의 배경이 제거됨 2023-06-11 03_19_33.png" alt="식품용기"
+                        style="width:150px;" class="moving-image fal">
+                        <img src="media/03_plastic/‘음료수병’의 배경이 제거됨 2023-06-11 03_19_53.png" alt="음료수병"
+                        style="width:50px;" class="moving-image fal">
+                        <img src="media/03_plastic/‘투명 막걸리병’의 배경이 제거됨 2023-06-11 03_19_53.png" alt="투명막걸리병"
+                        style="width:60px;" class="moving-image fal">
+                        <ul style="margin:auto 0;">
+                            <li style=" list-style-type: circle; ">투명 페트병의 내용물을 비우고 헹군 다음 라벨을 제거하고 찌그러트려 뚜껑을 닫아 배출합니다.</li>
+                            <li style=" list-style-type: circle; ">투명페티병은 일반 플라스틱과 다른 전용 수거함에 배출합니다.</li>
+                            <li style=" list-style-type: circle; ">일회용 컵, 식품 포장 용기, 세탁세제, 섬유유연제, 주방세제 페트병은 투명하더라도 투명 페트병이 아닌 일반 플라스틱에 버려야 합니다.</li>
+                        </ul>
+                    </div>
+                    <div class="explain_div">
+                        <img src="media/03_plastic/‘식용유병’의 배경이 제거됨 2023-06-11 03_19_32.png" alt="식용유병"
+                        style="width:150px;" class="moving-image fal">
+                        <ul style="margin:auto 0;">
+                            <li style=" list-style-type: circle; ">식용유병은 일반 플라스틱에 버리고, 폐식용유는 이물질이 섞이지 않게 모아 가까운 곳에 설치된 폐유 수거함(동 주민센터, 일부 아파트 등)에 배출합니다.</li>
+                            
+                        </ul>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer>
+        © 2023 다쓰올배 by 장다연
+    </footer>
+</body>
+
+</html>
